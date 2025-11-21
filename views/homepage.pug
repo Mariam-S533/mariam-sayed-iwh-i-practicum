@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1 Pets Dashboard
+    p
+      a(href='/update-cobj') Create New Pet Record
+    hr
+
+    if error
+      p(style='color: red;')= error
+
+    if customObjects && customObjects.length > 0
+      table
+        thead
+          tr
+            each prop in propertyNames
+              th= prop.charAt(0).toUpperCase() + prop.slice(1)
+            th Actions
+        tbody
+          each object in customObjects
+            tr
+              each prop in propertyNames
+                td= object.properties[prop]
+              td Edit/Delete (Not required for Practicum)
+    else
+      p No pet records found. Please create one!

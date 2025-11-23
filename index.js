@@ -2,6 +2,9 @@ const express = require('express');
 const axios = require('axios');
 const app = express();
 
+// Use dotenv to read .env file variables
+require('dotenv').config();
+
 app.set('view engine', 'pug');
 app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended: true }));
@@ -9,12 +12,12 @@ app.use(express.json());
 
 // * IMPORTANT: Rename this variable in your .env file to match the one below:
 // * The boilerplate uses 'PRIVATE_APP_ACCESS', but your .env uses 'PRIVATE_APP_ACCESS_TOKEN'
-const PRIVATE_APP_ACCESS = process.env.PRIVATE_APP_ACCESS_TOKEN; 
+const PRIVATE_APP_ACCESS = process.env.PRIVATE_APP_ACCESS; 
 // const PRIVATE_APP_ACCESS = process.env.PRIVATE_APP_ACCESS; 
 // To fix this: Change the line above to use process.env.PRIVATE_APP_ACCESS_TOKEN 
 // OR rename the variable in your .env file to PRIVATE_APP_ACCESS
 
-const CUSTOM_OBJECT_ID = 'p_2-194890475_pet'; // <--- PASTE YOUR REAL ID HERE
+const CUSTOM_OBJECT_ID = '2-194890475'; // <--- PASTE YOUR REAL ID HERE
 const BASE_URL = 'https://api.hubapi.com/crm/v3/objects';
 const PROPERTY_NAMES = 'name,type,bio'; // Custom properties to display/send
 

@@ -44,6 +44,9 @@ label, input {
     margin-top: 5px;
     display: block;
     font-size: inherit;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 input[type="text"] {
@@ -51,8 +54,71 @@ input[type="text"] {
 }
 
 input[type="submit"] {
-    background-color: lightgrey;
+    background-color: white;
     border: none;
     padding: .375rem 1rem;
     margin-top: 10px;
+}
+
+
+table {
+    width: 90%; 
+    max-width: 800px;
+    margin: 2rem auto; 
+    border-collapse: separate; 
+    border-spacing: 0;
+    border: 1px solid #333; 
+}
+
+thead {
+    background-color: #f7a9a9; 
+}
+
+th {
+    padding: 10px;
+    text-align: left;
+    
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #333; 
+}
+
+th {
+    font-weight: bold;
+}
+
+table, thead, th, td {
+    border-radius: 0; 
+}
+
+a{
+        font-size: 20px;
+        color: blue;
+        padding: 10px;
+}
+
+.formdiv{
+    width: 50%;
+    margin: auto;
+}
+fieldset{
+    border: 2px solid lightgrey;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+button{
+    margin-top: 10px;
+    padding: .5rem 1rem;
+    font-size: 16px;
+    background-color: black;
+    color: lightgray;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+legend{
+    font-size: 1.2rem;
+    font-weight: bold;
 }

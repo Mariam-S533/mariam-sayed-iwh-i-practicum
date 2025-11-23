@@ -75,7 +75,6 @@ app.get('/update-cobj', (req, res) => {
 app.post('/update-cobj', async (req, res) => {
     const createRecordUrl = `${BASE_URL}/${CUSTOM_OBJECT_ID}`;
     
-    // Form data from req.body is mapped to the API payload
     const data = {
         properties: {
             name: req.body.petName, // Maps to input name="petName" in the form

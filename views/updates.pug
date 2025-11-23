@@ -12,19 +12,21 @@ html
     if error
       p(style='color: red;')= error
 
-    // Form POSTs data to the app.post('/update-cobj') route
-    form(action='/update-cobj', method='POST')
-      fieldset
-        legend Pet Details
+    div.formdiv
+      form(action='/update-cobj', method='POST')
+        fieldset
+          legend Pet Details
 
-        label(for='petName') Pet Name (Internal: name)
-        // CRITICAL: The 'name' attribute must match the properties used in index.js
-        input(type='text', id='petName', name='petName', required)
+          label(for='petName') Pet Name (Internal: name)
+          input(type='text', id='petName', name='petName', required, placeholder='e.g., Fido')
+          
+          label(for='petType') Pet Type (Internal: type)
+          input(type='text', id='petType', name='petType', required, placeholder='e.g., Dog, Cat')
+          
+          label(for='petBio') Pet Bio (Internal: bio)
+          input(type='text', id='petBio', name='petBio', required, placeholder='e.g., Loves to play fetch.')
+          
+          button(type='submit') Create Pet Record
+
+
         
-        label(for='petType') Pet Type (Internal: type)
-        input(type='text', id='petType', name='petType', required)
-        
-        label(for='petBio') Pet Bio (Internal: bio)
-        input(type='text', id='petBio', name='petBio')
-        
-        button(type='submit') Create Pet Record
